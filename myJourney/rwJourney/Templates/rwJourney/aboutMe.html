@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>About Me</title></head>
+<body>
+  <h1>About Me</h1>
+  {% if about %}
+    <p><strong>Name:</strong> {{ about.full_name }}</p>
+    <p><strong>Roll/ID:</strong> {{ about.roll_number }}</p>
+    <p>{{ about.bio|linebreaks }}</p>
+  {% else %}
+    <p>No personal info found. Add it via admin.</p>
+  {% endif %}
+  <hr>
+    <a href="{% url 'rwJourney:index' %}">Back to Learning Journey</a>
+</body>
+</html>

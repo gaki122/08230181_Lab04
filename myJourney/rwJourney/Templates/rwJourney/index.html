@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Learning Journey</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-card">
+            <div class="profile-circle">
+                <img src="{% static 'images/about.jpg' %}" alt="Rinzin Wangmo" class="profile-image">
+            </div>
+            <h1 class="name">Rinzin Wangmo</h1>
+            <p class="class">BEd ICT 'C'</p>
+        </div>
+
+        <div class="right-section">
+            <div class="card">
+                <h2 class="card-title">My Learning Journey</h2>
+
+                <p class="bio-text">
+                    I am an aspiring educator from the beautiful village of Yabrang in Trashigang Dzongkhag, Bhutan.
+                    Rooted in the rich culture and traditions of my homeland, I am a dedicated learner and future
+                    teacher
+                    who dreams of using technology to transform education in my community.
+                    I believe in the power of knowledge and continuous learning to create positive change.
+                    With a strong passion for ICT and teaching, I am committed to guiding students to become
+                    innovative thinkers, lifelong learners, and responsible digital citizens.
+                    My journey is driven by the desire to bridge the gap between tradition and technology,
+                    making learning accessible and meaningful for all.
+                </p>
+                <p class="bio-text">
+                    Born and raised in the beautiful Bhutan. When I am not busy learning, you will likely find me
+                    exploring new technologies, reading educational content, or sharing knowledge with my friends.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 class="section-subtitle">Learning Tools</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+                        <div class="skill-name">HTML / CSS</div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+                        <div class="skill-name">JavaScript</div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fa-solid fa-palette"></i></div>
+                        <div class="skill-name">Design</div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fa-brands fa-react"></i></div>
+                        <div class="skill-name">React</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="education-container">
+            <h2 class="section-title">EDUCATION</h2>
+            <p class="about-intro">
+                An overview of my academic background, from early schooling to tertiary education.
+            </p>
+
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2009-2015</div>
+                        <div class="timeline-school">Yabrang Primary School</div>
+                        <p class="timeline-description initial-truncate" id="edu-desc-1">
+                            In my world as a primary student, life is all about making new friends and discovering
+                            everything. My days are filled with learning how to read and write, drawing colorful
+                            pictures, and playing games outside with my classmates. It is a fun mix of being in a
+                            classroom and getting to explore and create with my own hands.
+                        </p>
+                        <button class="read-more-toggle" onclick="toggleReadMore('edu-desc-1', this)">Read More</button>
+                    </div>
+                    <div class="timeline-logo">
+                        <img src="{% static 'images/about-img-1.jpg' %}" alt="Yabrang Primary School">
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2016-2019</div>
+                        <div class="timeline-school">Dungtse Central School</div>
+                        <p class="timeline-description initial-truncate" id="edu-desc-2">
+                            As a middle school student, my world is getting bigger and more complex. Instead of one
+                            teacher, I have a different teacher for each subject, and I have to switch classes
+                            throughout the day. I have more homework and bigger projects, and I'm learning how to manage
+                            my time. The social scene is also a lot more important, and I am figuring out where I fit in
+                            while trying to balance my studies with my friends.
+                        </p>
+                        <button class="read-more-toggle" onclick="toggleReadMore('edu-desc-2', this)">Read More</button>
+                    </div>
+                    <div class="timeline-logo">
+                        <img src="{% static 'images/dungtse.jpg' %}" alt="Dungtse Central School">
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020-2022</div>
+                        <div class="timeline-school">Rangjung Higher School</div>
+                        <p class="timeline-description initial-truncate" id="edu-desc-3">
+                            As a higher school student, my world is all about preparing for the future. The classes are
+                            more challenging, with a bigger focus on exams and choosing subjects that will lead to a
+                            career. I have more freedom to choose what I study, and I'm also managing a busier schedule
+                            with clubs and social events. It's a time of figuring out my own interests and taking more
+                            responsibility for my studies and my life.
+                        </p>
+                        <button class="read-more-toggle" onclick="toggleReadMore('edu-desc-3', this)">Read More</button>
+                    </div>
+                    <div class="timeline-logo">
+                        <img src="{% static 'images/rangjung.jpg' %}" alt="Rangjung Higher School">
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023-Present</div>
+                        <div class="timeline-school">Samtse College of Education</div>
+                        <p class="timeline-description initial-truncate" id="edu-desc-4">
+                            As a B.Ed. ICT student at Samtse College of Education, my experience is much more focused
+                            than in previous schools. My days are a mix of studying educational theories and getting
+                            hands-on with technology. I'm not just learning to code or use software; I'm learning how to
+                            teach it effectively to future students.
+                        </p>
+                        <button class="read-more-toggle" onclick="toggleReadMore('edu-desc-4', this)">Read More</button>
+                    </div>
+                    <div class="timeline-logo">
+                        <img src="{% static 'images/samtse.jpg' %}" alt="Samtse College of Education">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleReadMore(id, button) {
+            const element = document.getElementById(id);
+            element.classList.toggle('expanded');
+
+            if (element.classList.contains('expanded')) {
+                button.textContent = 'Read Less';
+            } else {
+                button.textContent = 'Read More';
+            }
+        }
+    </script>
+   
+<!-- FOOTER SECTION -->
+<footer>
+  <p>© 2025 Rinzin Wangmo</p>
+</footer>
+
+</body>
+
+</html>
