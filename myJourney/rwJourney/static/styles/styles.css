@@ -1,0 +1,224 @@
+/* --- Global Styles and Typography --- */
+:root {
+    --primary-blue: #4285F4; /* Google Blue */
+    --light-blue: #E8F0FE; /* Very light blue background */
+    --dark-text: #202124;
+    --secondary-text: #5F6368;
+    --white: #FFFFFF;
+    --red-accent: #EA4335;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-blue);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px; /* Max width for desktop viewing */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    color: var(--dark-text);
+    margin-top: 0;
+}
+
+p {
+    color: var(--secondary-text);
+    line-height: 1.6;
+}
+
+/* --- Card Styles (Core Design Elements) --- */
+
+/* Base style for all cards (white background, rounded corners, shadow) */
+.header-card,
+.content-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 25px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+/* Specific styling for the main blue header */
+.header-card {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 40px 30px;
+    position: relative;
+    z-index: 10;
+    margin-top: 25px; /* Ensures a little space from the top of the body */
+    
+}
+
+.header-card h1 {
+    color: var(--white);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.header-card p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #FBB034; /* Yellow accent for stars/hearts */
+    margin: 0 8px;
+    display: inline-block;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+/* --- Profile Image and Overlap Styling --- */
+
+.profile-image-wrapper {
+    margin-top: -85px; /* Pulls the image up to overlap the header card */
+    margin-bottom: 25px;
+    z-index: 20;
+    position: relative;
+    display: inline-block; /* Essential for centering */
+}
+
+.profile-image-small {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--white); /* White border around the image */
+    box-shadow: var(--shadow);
+}
+
+/* Styling for About Me Content */
+.content-card h3 {
+    color: var(--dark-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.intro-text {
+    max-width: 650px;
+    margin: 15px auto 30px auto;
+    font-size: 1rem;
+}
+
+/* Detail Section (Only used on aboutMe.html, included for completeness) */
+.detail-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.95rem;
+}
+.detail-section p {
+    margin: 5px 0;
+}
+.detail-section strong {
+    color: var(--dark-text);
+}
+
+
+/* --- Navigation and Links --- */
+
+.navigation-section {
+    margin-top: 20px;
+}
+
+.nav-button {
+    display: inline-block;
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s;
+}
+
+.nav-button:hover {
+    background-color: #3C76D2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Back Link (for About Me page to go back to Index) */
+.header-card .back-link {
+    color: var(--white); /* White text on blue background */
+    text-decoration: underline;
+    display: block;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.header-card .back-link:hover {
+    color: #f0f0f0;
+}
+
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+    margin-top: 10px;
+}
+
+/* --- Responsive Design (Mobile Optimization) --- */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header-card, .content-card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .header-card h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-card p {
+        font-size: 1rem;
+    }
+
+    .profile-image-wrapper {
+        margin-top: -75px;
+    }
+
+    .profile-image-small {
+        width: 120px;
+        height: 120px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .intro-text {
+        font-size: 0.95rem;
+    }
+}

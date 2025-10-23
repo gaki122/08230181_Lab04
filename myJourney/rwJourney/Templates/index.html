@@ -1,0 +1,53 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Learning Journey</title>
+    <!-- FIX: Corrected the path from 'css' to 'styles' based on your folder structure -->
+    <link rel="stylesheet" href="{% static 'rwJourney/styles/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- 1. Header Section (Kept) -->
+        <div class="header-card">
+            <h1><span class="icon">❤️</span> My Learning Journey <span class="icon">❤️</span></h1>
+            <p>Exploring the world of technology and education through continuous learning.
+                Passionate about ICT and empowering others through knowledge and innovation.</p>
+        </div>
+
+        <!-- 2. About Me Section (Kept) -->
+        <div class="content-card">
+            <h2 class="section-title">About Me</h2>
+
+            <div class="profile-image-wrapper">
+                <!-- Profile Image -->
+                <img src="{% static 'rwJourney\static\images\profile.jpg' %}" alt="Profile Picture" class="profile-image-small">
+            </div>
+
+            <p class="intro-text">
+                I am an aspiring educator from the beautiful village of Yabrang in Trashigang Dzongkhag, Bhutan.
+                Rooted in the rich culture and traditions of my homeland, I am a dedicated learner and future teacher 
+                who dreams of using technology to transform education in my community.
+                I believe in the power of knowledge and continuous learning to create positive change. 
+            </p>
+
+            <!-- Navigation to About Me (Kept the link, but simplified the container) -->
+            <div class="navigation-section">
+                <a href="{% url 'rwJourney:about' %}" class="nav-button">Learn More About Rinzin Wangmo →</a>
+            </div>
+        </div>
+
+        <!-- 3. Footer (Kept) -->
+         <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Rinzin Wangmo. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    </div>
+</body>
+</html>
